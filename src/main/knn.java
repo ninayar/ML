@@ -138,29 +138,6 @@ public class knn {
 	}
 
 	public static double eucledianDistance(TrainVotes t, TestVotes s) {
-		// double[] dist = new double[t.length];
-		// Knn_entity knn=new Knn_entity();
-
-		// for (int i = 0; i < t.length; i++) {
-		// distance = Math.sqrt(Math.pow(t[i].getDemocrat() - s.getDemocrat(),
-		// 2)
-		// + Math.pow(t[i].getPopulation() - s.getPopulation(), 2)
-		// + Math.pow(t[i].getPopulation_change() - s.getPopulation_change(), 2)
-		// + Math.pow(t[i].getAge65plus() - s.getAge65plus(), 2)
-		// + Math.pow(t[i].getBlack() - s.getBlack(), 2)
-		// + Math.pow(t[i].getHispanic() - s.getHispanic(), 2)
-		// + Math.pow(t[i].getEdu_bachelors() - s.getEdu_bachelors(), 2)
-		// + Math.pow(t[i].getIncome() - s.getIncome(), 2)
-		// + Math.pow(t[i].getPoverty() - s.getPoverty(), 2)
-		// + Math.pow(t[i].getDensity() - s.getDensity(), 2));
-		// knn.setEucledianDist(distance);
-		// knn.setIndex(i);
-		// knn.setCategory(t[i].getDemocrat());
-		// dist[i] = distance;
-		// }
-		// knn.setDistance(dist);
-		// return knn;
-
 		distance = Math.sqrt(Math.pow(t.getDemocrat() - s.getDemocrat(), 2)
 				+ Math.pow(t.getPopulation() - s.getPopulation(), 2)
 				+ Math.pow(t.getPopulation_change() - s.getPopulation_change(), 2)
@@ -169,7 +146,6 @@ public class knn {
 				+ Math.pow(t.getEdu_bachelors() - s.getEdu_bachelors(), 2) + Math.pow(t.getIncome() - s.getIncome(), 2)
 				+ Math.pow(t.getPoverty() - s.getPoverty(), 2) + Math.pow(t.getDensity() - s.getDensity(), 2));
 		return distance;
-
 	}
 
 	public static double knnalgo(TrainVotes[] t, TestVotes s) {
