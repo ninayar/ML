@@ -177,7 +177,7 @@ public class knn {
 				cat2 = temp_cat;
 			}
 		}
-		// k=3;
+		// k=2;
 		int len = distance2.length;
 		int count_rep = 0, count_dem = 0;
 		for (int i = 1; i < 5; i++) {
@@ -205,7 +205,7 @@ public class knn {
 		TestVotes[] s = test.toArray(new TestVotes[test.size()]);
 		double total = 0.0;
 		int cat = 0, count_rep = 0, count_dem = 0;
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 100; i++) {
 			distance2 = knnalgo(t, s[i]);
 			if (distance2 == 0) {
 				count_rep++;
@@ -221,7 +221,6 @@ public class knn {
 				cat = 1;
 			}
 		}
-		System.out.println(total / 10);
 	}
 
 }

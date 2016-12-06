@@ -6,12 +6,40 @@ public class Tree {
 	
 	int feature;
 	double max_gain;
+	Tree leftNode;
+	Tree rightNode;
+	Tree rootNode;
+	double category;
 	ArrayList<TrainVotes> root = new ArrayList<TrainVotes>();
 	ArrayList<TrainVotes> left = new ArrayList<TrainVotes>();
 	ArrayList<TrainVotes> right = new ArrayList<TrainVotes>();
 	
+	public double getCategory() {
+		return category;
+	}
+	public void setCategory(double category) {
+		this.category = category;
+	}
 	public int getFeature() {
 		return feature;
+	}
+	public Tree getLeftNode() {
+		return leftNode;
+	}
+	public void setLeftNode(Tree leftNode) {
+		this.leftNode = leftNode;
+	}
+	public Tree getRightNode() {
+		return rightNode;
+	}
+	public void setRightNode(Tree rightNode) {
+		this.rightNode = rightNode;
+	}
+	public Tree getRootNode() {
+		return rootNode;
+	}
+	public void setRootNode(Tree rootNode) {
+		this.rootNode = rootNode;
 	}
 	public void setFeature(int feature) {
 		this.feature = feature;
@@ -43,8 +71,9 @@ public class Tree {
 	}
 	@Override
 	public String toString() {
-		return "Tree [feature=" + feature + ", max_gain=" + max_gain + ", root=" + root + ", left=" + left + ", right="
-				+ right + "]";
+		return "Tree [feature=" + feature + ", max_gain=" + max_gain + ", leftNode=" + leftNode + ", rightNode="
+				+ rightNode + ", rootNode=" + rootNode + ", category=" + category + ", root=" + root + ", left=" + left
+				+ ", right=" + right + "]";
 	}
 	
 	

@@ -19,7 +19,8 @@ public class Clustering {
 	static ArrayList<Double> d = new ArrayList<Double>();
 
 	public static ArrayList<TrainVotes> train() {
-		String csvFile = "D:/ninayar/workspace/ML/src/utils/votes-train.csv";
+//		String csvFile = "D:/ninayar/workspace/ML/src/utils/votes-train.csv";
+		String csvFile = "D:/ninayar/workspace/ML/src/utils/vector_norm_Train.csv";
 		String[] temp;
 		ArrayList<TestVotes> test = new ArrayList<TestVotes>();
 		int row = 0;
@@ -77,7 +78,9 @@ public class Clustering {
 
 	public static ArrayList<TestVotes> test() {
 
-		String csvFile = "D:/ninayar/workspace/ML/src/utils/votes-test.csv";
+//		String csvFile = "D:/ninayar/workspace/ML/src/utils/votes-test.csv";
+		String csvFile = "D:/ninayar/workspace/ML/src/utils/vector_norm_test.csv";
+
 		String[] temp;
 
 		ArrayList<TestVotes> test = new ArrayList<TestVotes>();
@@ -288,13 +291,18 @@ public class Clustering {
 		ArrayList<TrainVotes> cluster_combined = new ArrayList<TrainVotes>();
 		int size=t.length;
 		TrainVotes[] comb = null;
-		while(size>0)
-		{
+//		while(size<=2334 && size>10)
+//		{
 		cluster_combined=clustering(t,size);
 		comb = cluster_combined.toArray(new TrainVotes[cluster_combined.size()]);
+		size=cluster_combined.size();
+//		}
+		System.out.println(cluster_combined.size());
 
-		}
-		System.out.println(size);
+		cluster_combined=clustering(t,size);
+		comb = cluster_combined.toArray(new TrainVotes[cluster_combined.size()]);
+		size=cluster_combined.size();
+		System.out.println(cluster_combined.size());
 
 		//// initial cluster is t
 		// for (int i = 0; i < t.length; i++) {

@@ -193,10 +193,10 @@ public class Kmeans {
 			c2.setCentroid1(centroid1);
 			System.out.println("point is in centroid1");
 			if (centroid1[0] == 0) {
-				// System.out.print("Republican");
+				 System.out.print("Republican");
 				c2.setCategory(0);
 			} else {
-				// System.out.print("Democrat");
+				 System.out.print("Democrat");
 				c2.setCategory(1);
 			}
 		} else {

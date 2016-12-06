@@ -183,11 +183,15 @@ public class Perceptron {
 		{
 		final_w=calculate(w,t[i]);
 		}
-		double cat=s[9].getDemocrat()*final_w[0];
+		for(int i=0;i<10;i++)
+		{
+		double cat=s[i].getDemocrat()*final_w[0];
+		
 		if(cat>0)
 		System.out.println("democrat");
 		else
 		System.out.println("republic");
+		}
 
 	}
 
